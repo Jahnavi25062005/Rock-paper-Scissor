@@ -1,0 +1,117 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-align: center;
+    font-family: 'Segoe UI', 'Roboto', Arial, sans-serif;
+    background: #181a20;
+}
+
+body {
+    min-height: 100vh;
+    background: linear-gradient(135deg, #181a20 0%, #23272f 100%);
+}
+
+h1 {
+    background-color: #23272f;
+    color: #f7ca18;
+    height: 5rem;
+    line-height: 5rem;
+    letter-spacing: 2px;
+    font-size: 2.5rem;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+}
+
+.options {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 3rem;
+    margin-top: 3rem;
+}
+
+.option {
+    height: 150px;
+    width: 150px;
+    border-radius: 50%;
+    background: #23272f;
+    box-shadow: 0 4px 16px rgba(0,0,0,0.35);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: transform 0.2s, box-shadow 0.2s, background 0.2s;
+    border: 3px solid #393e46;
+}
+
+img {
+    height: 120px;
+    width: 120px;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 2px solid #f7ca18;
+    background: #191e24;
+}
+
+.option:hover {
+    cursor: pointer;
+    background: #f7ca18;
+    box-shadow: 0 6px 24px rgba(247,202,24,0.25);
+    border-color: #f7ca18;
+    transform: scale(1.08);
+}
+
+.scoreboard {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 2rem;
+    margin-top: 3rem;
+    gap: 5rem;
+}
+
+.score {
+    background: #23272f;
+    padding: 2rem 2.5rem;
+    border-radius: 1rem;
+    box-shadow: 0 2px 12px rgba(0,0,0,0.18);
+    color: #f7ca18;
+}
+
+#player-score, #computer-score {
+    font-size: 2.5rem;
+    color: #f7ca18;
+    margin-bottom: 0.5rem;
+}
+
+.score p:last-child {
+    font-size: 1.2rem;
+    color: #b8b8b8;
+    margin-top: 0.5rem;
+}
+
+.message-container {
+    margin-top: 5rem;
+}
+
+#message {
+    background-color: #23272f;
+    color: #f7ca18;
+    font-size: 2rem;
+    display: inline-block;
+    padding: 1rem 2rem;
+    border-radius: 1rem;
+    box-shadow: 0 2px 12px rgba(0,0,0,0.20);
+    min-width: 300px;
+    transition: background 0.2s, color 0.2s;
+}
+
+@media (max-width: 700px) {
+    .options {
+        flex-direction: column;
+        gap: 2rem;
+    }
+    .scoreboard {
+        flex-direction: column;
+        gap: 2rem;
+    }
+}
